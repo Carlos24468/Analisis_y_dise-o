@@ -32,7 +32,7 @@ public class Clientes {
                 }
                 clxr[clr.length]=cl;
                 clr=clxr;
-                System.out.println("cliente registrado con exito: ");
+                System.out.println("cliente registrado con exito");
             }
     
     
