@@ -8,11 +8,14 @@ public class Tienda2 {
       Scanner sc = new Scanner(System.in);
         String d;
         String c;
+        int m;
         System.out.println("Ingrese el nombre de alguno de los propirtarios: ");
         d=sc.nextLine();
         Dueno pr =new Dueno(d);
-        pr.propietarios(d);
+        if(pr.propietarios(d)){  
+        
         sc.nextLine();
+        System.out.println("*****MENU*****");
         System.out.println("ingresar nombre del cliente:");
         c=sc.nextLine();
         
@@ -20,5 +23,5 @@ public class Tienda2 {
         cl1.registro(c);
         
     }
-    
+    }
 }

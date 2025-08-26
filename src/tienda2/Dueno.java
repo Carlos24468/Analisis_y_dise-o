@@ -8,20 +8,16 @@ public class Dueno {
     public Dueno(String p){
         this.p=p;
     }
-    public void propietarios(String d){
-        for(int i=0;i<3;i++){
+    
+        public boolean propietarios(String d){
+        for(int i=0;i<du.length;i++){
             if(d.equalsIgnoreCase(du[i])){
-                encontrado=true;
-                break;
+                System.out.println("Bienvenido");
+                return true;
             }
         }
-            if(encontrado){
-                System.out.println("Bienvenido");
-                
-            }
-            else{
-                System.out.println("intentelo de nuevo");
-            }
+        System.out.println("Intentelo de nuevo ");
+        return false;
         
     
 }
