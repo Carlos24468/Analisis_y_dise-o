@@ -8,8 +8,13 @@ public class Tienda2 {
       Scanner sc = new Scanner(System.in);
         String d;
         String c;
+        String cl;
         int m;
         int mc;
+        boolean SALIR=false;
+        boolean SALIR1=false;
+        boolean SALIR2=false;
+        boolean SALIR3=false;
         System.out.println("Ingrese el nombre de alguno de los propirtarios: ");
         d=sc.nextLine();
         Dueno pr =new Dueno(d);
@@ -19,12 +24,14 @@ public class Tienda2 {
         Clientes cl1=new Clientes("");
         sc.nextLine();
         //menu general
-        System.out.println("**********MENU**********\n(1)Clientes\n(2)Productos\n(3)Almacen\n************************");
+        while(!SALIR){
+        System.out.println("**********MENU**********\n(1)Clientes\n(2)Productos\n(3)Almacen\n(4)SALIR************************");
         m=sc.nextInt();
+        
         if(m==1){
-            
             sc.nextLine();
             //Menu de los clientes
+            
             System.out.println("**********MENU**********\n(1)Agregar clientes\n(2)Buscar clientes\n(3)Lista de clientes\n************************");
             mc=sc.nextInt();
             sc.nextLine();
@@ -37,6 +44,10 @@ public class Tienda2 {
         }
         
         if(mc==2){
+            sc.nextLine();
+            System.out.println("ingresar nombre del cliente: ");
+            cl=sc.nextLine();
+            cl1.busqueda(cl);
             
         }
         //imprime a los clientes registrados
@@ -44,6 +55,20 @@ public class Tienda2 {
         cl1.lista();
         }
     }
+        if(m==2){
+            
+        }
+        if(m==3){
+            
+        }
+        if(m==4){
+            System.out.println("SALIENDO TENGA UN BUEN DIA");
+            SALIR=true;
+            
+        }
+    }
+        
     }
 }
 }
+    

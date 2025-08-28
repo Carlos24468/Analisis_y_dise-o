@@ -40,7 +40,25 @@ public class Clientes {
     
     
 }
+    
+    //busca a los clientes 
     public void busqueda(String bus){
+        boolean clb=false;
+         for (int i=0;i<clr.length;i++){
+            
+        if(bus.equalsIgnoreCase(clr[i])){
+                clb=true;
+                break;
+            }
+        }
+            if(clb){
+                System.out.println("El cliente ya esta registrago");
+                
+            }
+            else{
+                
+                System.out.println("Cliente no registrado rejistrelo por favor");
+            }
         
     }
     //imprime los clientes registrados (aca se ordenara por orden alfabetico )
