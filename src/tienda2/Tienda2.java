@@ -56,10 +56,10 @@ public class Tienda2 {
         }
     }
         if(m==2){
-            
+            //aplicar lo de procutos
         }
         if(m==3){
-            
+            //apliacr lo echo en el almacen
         }
         if(m==4){
             System.out.println("SALIENDO TENGA UN BUEN DIA");
