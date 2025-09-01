@@ -20,7 +20,16 @@ public class Almacen {
         }
         
     }
-    //agregar productos :echo
+    public void listapro(){
+        if(cont==0){
+            System.out.println("No hay productos registrados");
+            return;
+        }
+        System.out.println("LISTA DE PRODUCTOS");
+        for(int i=0;i<cont;i++){
+            System.out.println(producto[i]);
+        }
+    }
     //poner una lista de los productos si no hay productos le dira que no hay productos registrados
     //usar el mettodo burbuja para ordenar nombres 
     //ordenar por precios
