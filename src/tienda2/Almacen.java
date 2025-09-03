@@ -30,7 +30,16 @@ public class Almacen {
             System.out.println(producto[i]);
         }
     }
-    //poner una lista de los productos si no hay productos le dira que no hay productos registrados
-    //usar el mettodo burbuja para ordenar nombres 
-    //ordenar por precios
+    public void ordenPrecio(){
+        for (int i=1;i<cont;i++){
+            Productos actual =producto[i];
+            int j=i-1;
+            while(j>=0 && producto[j].precio>actual.precio){
+                producto[j+1]=producto[j];
+                j--;
+            }
+            producto[j+1]=actual;
+        }
+        System.out.println("Productos hordenados por precio");
+    }
 }
