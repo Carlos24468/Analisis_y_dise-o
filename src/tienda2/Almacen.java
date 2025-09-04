@@ -30,6 +30,7 @@ public class Almacen {
             System.out.println(producto[i]);
         }
     }
+    //odena los productos segun el precio
     public void ordenPrecio(){
         for (int i=1;i<cont;i++){
             Productos actual =producto[i];
@@ -41,5 +42,20 @@ public class Almacen {
             producto[j+1]=actual;
         }
         System.out.println("Productos hordenados por precio");
+    }
+    //ordana los nombres segun que tan grande sea el nombre  
+    public void ordennombre(){
+        for(int i=1;i<cont;i++){
+            Productos actual = producto[i];
+            int j = i-1;
+            //>0 -> alfabeticamente mallor que el segundo
+            while(j>=0 && producto[j].nombre.compareToIgnoreCase(actual.nombre)>0){
+                producto[j+1]=producto[j];
+                j--;
+                
+            }
+            producto[j+1]=actual;
+        }
+        System.out.println("producto ordenado por orden alfabetico");
     }
 }
