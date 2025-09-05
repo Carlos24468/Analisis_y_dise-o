@@ -9,8 +9,10 @@ public class Tienda2 {
         String d;
         String c;
         String cl;
+        String produc;
         int m;
         int mc;
+        int mal;
         boolean SALIR=false;
         boolean SALIR1=false;
         boolean SALIR2=false;
@@ -20,12 +22,13 @@ public class Tienda2 {
         Dueno pr =new Dueno(d);
         //confirma si es el dueño si es asi le da la bienbenida si no le pide que lo intente otra ves 
         if(pr.propietarios(d)){ 
-            //se crea un solo objeto cliente 
+            //se crea un solo objeto cliente
+        Almacen al1 = new Almacen(20);
         Clientes cl1=new Clientes("");
         sc.nextLine();
         //menu general
         while(!SALIR){
-        System.out.println("**********MENU**********\n(1)Clientes\n(2)Productos\n(3)Almacen\n(4)SALIR************************");
+        System.out.println("**********MENU**********\n(1)Clientes\n(2)Productos\n(3)Almacen\n(4)SALIR\n************************");
         m=sc.nextInt();
         
         if(m==1){
@@ -60,6 +63,37 @@ public class Tienda2 {
         }
         if(m==3){
             //apliacr lo echo en el almacen
+            System.out.println("**********MENU**********\n(1)Agregar producto\n(2)Lista de producto\n************************");
+            mal=sc.nextInt();
+            sc.nextLine();
+            if(mal==1){
+                System.out.println("Ingrese el nombre del producto");
+                String nompro=sc.nextLine();
+                
+                System.out.println("Ingrese el Stock del producto");
+                int stockpro=sc.nextInt();
+               
+                  System.out.println("Ingrese el precio del producto");
+                double prepro=sc.nextDouble();
+                Productos proal = new Productos(nompro,stockpro,prepro);
+                al1.agrepro(proal);
+            }
+            if(mal==2){
+                System.out.println("\"**********MENU**********\n(1)Lista de productos\n(2)Lista de productos ordenados por precio\n(3)Lista de productos ordenados por nombre\n************************");
+                int ldpo=sc.nextInt();
+                if(ldpo==1){
+                    System.out.println("Lista de priductos");
+                    al1.listapro();
+                }
+                if(ldpo==2){
+                    System.out.println("Lista de productos ordenados por precio");
+                    al1.ordenPrecio();
+                }
+                if(ldpo==3){
+                    System.out.println("Lista de productos ordenados por nombre");
+                    al1.ordennombre();
+                }
+            }
         }
         if(m==4){
             System.out.println("SALIENDO TENGA UN BUEN DIA");
