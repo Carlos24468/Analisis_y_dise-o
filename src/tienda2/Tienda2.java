@@ -14,9 +14,7 @@ public class Tienda2 {
         int mc;
         int mal;
         boolean SALIR=false;
-        boolean SALIR1=false;
-        boolean SALIR2=false;
-        boolean SALIR3=false;
+        
         System.out.println("Ingrese el nombre de alguno de los propirtarios: ");
         d=sc.nextLine();
         Dueno pr =new Dueno(d);
@@ -59,15 +57,10 @@ public class Tienda2 {
         }
     }
         if(m==2){
-            //aplicar lo de procutos
-        }
-        if(m==3){
-            //apliacr lo echo en el almacen
-            System.out.println("**********MENU**********\n(1)Agregar producto\n(2)Lista de producto\n************************");
-            mal=sc.nextInt();
             sc.nextLine();
-            if(mal==1){
-                System.out.println("Ingrese el nombre del producto");
+            //aplicar lo de procutos
+            System.out.println("***** Agregar Productos *****");
+            System.out.println("Ingrese el nombre del producto");
                 String nompro=sc.nextLine();
                 
                 System.out.println("Ingrese el Stock del producto");
@@ -77,23 +70,31 @@ public class Tienda2 {
                 double prepro=sc.nextDouble();
                 Productos proal = new Productos(nompro,stockpro,prepro);
                 al1.agrepro(proal);
-            }
-            if(mal==2){
+        }
+        if(m==3){
+            //apliacr lo echo en el almacen
+            System.out.println("**********MENU**********\nLista de producto\n************************");
+            
+            sc.nextLine();
+            
+            
                 System.out.println("\"**********MENU**********\n(1)Lista de productos\n(2)Lista de productos ordenados por precio\n(3)Lista de productos ordenados por nombre\n************************");
                 int ldpo=sc.nextInt();
                 if(ldpo==1){
-                    System.out.println("Lista de priductos");
+                    System.out.println("Lista de productos");
                     al1.listapro();
                 }
                 if(ldpo==2){
                     System.out.println("Lista de productos ordenados por precio");
                     al1.ordenPrecio();
+                    al1.listapro();
                 }
                 if(ldpo==3){
                     System.out.println("Lista de productos ordenados por nombre");
                     al1.ordennombre();
+                    al1.listapro();
                 }
-            }
+            
         }
         if(m==4){
             System.out.println("SALIENDO TENGA UN BUEN DIA");

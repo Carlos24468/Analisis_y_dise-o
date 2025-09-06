@@ -27,7 +27,7 @@ public class Clientes {
             }
             else{
                 
-                System.out.println("Cliente no registrado\ningrese el nombre del cliente a registrar ");
+                System.out.println("Cliente no registrado\n\ningrese el nombre del cliente a registrar ");
                 cl=sc1.nextLine();
                 String clxr[]=new String[clr.length+1];
                 for(int y=0;y<clr.length;y++){

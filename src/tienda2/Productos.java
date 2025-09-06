@@ -10,8 +10,9 @@ public class Productos {
         this.stock=stock;
         this.precio=precio;
 }
-    public void mostrar(){
-        System.out.println("Nombre: "+nombre+" Precio: "+precio+"Stock"+stock);
+    @Override
+    public String toString(){
+        return "Producto: " + nombre + " | Precio: " + precio + " | Stock: " + stock;
     }
     
 }
