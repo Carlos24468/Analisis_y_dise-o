@@ -30,6 +30,7 @@ public class Almacen {
             System.out.println(producto[i]);
         }
     }
+    //ordenacion por insercion 
     //odena los productos segun el precio
     public void ordenPrecio(){
         for (int i=1;i<cont;i++){
@@ -43,6 +44,7 @@ public class Almacen {
         }
         System.out.println("Productos hordenados por precio");
     }
+    //ordenacion por insercion 
     //ordana los nombres segun que tan grande sea el nombre  
     public void ordennombre(){
         for(int i=1;i<cont;i++){
