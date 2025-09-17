@@ -70,4 +70,7 @@ public class Clientes {
         }
         
     }
+    /*
+    aplicar un has donde se buscaran los dni de los clientes 
+    */
 }
