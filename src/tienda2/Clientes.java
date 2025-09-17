@@ -52,7 +52,7 @@ public class Clientes {
             }
         }
             if(clb){
-                System.out.println("El cliente ya esta registrago");
+                System.out.println("El cliente ya esta registrago123");
                 
             }
             else{
