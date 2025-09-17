@@ -1,6 +1,6 @@
 
 package tienda2;
-import java.util.Scanner;
+import java.util.*;
 public class Tienda2 {
 
 
@@ -10,6 +10,8 @@ public class Tienda2 {
         String c;
         String cl;
         String produc;
+        int cdcl;
+        int cdpro;        
         int m;
         int mc;
         int mal;
@@ -62,13 +64,14 @@ public class Tienda2 {
             System.out.println("***** Agregar Productos *****");
             System.out.println("Ingrese el nombre del producto");
                 String nompro=sc.nextLine();
-                
+                System.out.println("ingrese el codigo del producto");
+                int codpro=sc.nextInt();
                 System.out.println("Ingrese el Stock del producto");
                 int stockpro=sc.nextInt();
                
                   System.out.println("Ingrese el precio del producto");
                 double prepro=sc.nextDouble();
-                Productos proal = new Productos(nompro,stockpro,prepro);
+                Productos proal = new Productos(nompro,codpro,stockpro,prepro);
                 al1.agrepro(proal);
         }
         if(m==3){

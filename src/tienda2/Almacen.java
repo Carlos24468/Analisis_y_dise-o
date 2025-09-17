@@ -62,3 +62,6 @@ public class Almacen {
     }
    
 }
+/*
+agregar cogigos a los productos 
+*/

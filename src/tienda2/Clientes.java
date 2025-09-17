@@ -1,6 +1,6 @@
 
 package tienda2;
-import java.util.Scanner;
+import java.util.*;
 public class Clientes {
     Scanner sc1=new Scanner(System.in);
     String cl;
@@ -29,6 +29,7 @@ public class Clientes {
                 
                 System.out.println("Cliente no registrado\n\ningrese el nombre del cliente a registrar ");
                 cl=sc1.nextLine();
+                System.out.println("ingrese el DNI del cliente");
                 String clxr[]=new String[clr.length+1];
                 for(int y=0;y<clr.length;y++){
                     clxr[y]=clr[y];
@@ -72,5 +73,6 @@ public class Clientes {
     }
     /*
     aplicar un has donde se buscaran los dni de los clientes 
+    agregar dni a los clientes 
     */
 }
