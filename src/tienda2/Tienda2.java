@@ -51,7 +51,7 @@ public class Tienda2 {
             System.out.println("ingresar nombre del cliente: ");
             cl=sc.nextLine();
             cl1.busqueda(cl);
-            
+            System.out.println("ingrese dni");
         }
         //imprime a los clientes registrados
         if(mc==3){
