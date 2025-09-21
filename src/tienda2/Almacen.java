@@ -14,6 +14,7 @@ public class Almacen {
             producto[cont]=p;
             cont++;
             System.out.println("Procucto agregado");
+            System.out.println("agregar codigo del producto");
         }
         else{
             System.out.println("Capacidad maxima alcansada");
