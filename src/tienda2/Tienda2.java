@@ -77,6 +77,7 @@ public class Tienda2 {
         if(m==3){
             //apliacr lo echo en el almacen
             System.out.println("**********MENU**********\nLista de producto\n************************");
+            System.out.println("agregar codido del producto");
             
             sc.nextLine();
             
