@@ -102,6 +102,7 @@ public class Tienda2 {
         }
         if(m==4){
             System.out.println("SALIENDO TENGA UN BUEN DIA....");
+            System.out.println("avansar coma sea");
             SALIR=true;
             
         }
