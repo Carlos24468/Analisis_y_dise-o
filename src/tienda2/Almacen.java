@@ -44,6 +44,7 @@ public class Almacen {
             producto[j+1]=actual;
         }
         System.out.println("Productos hordenados por precio");
+        System.out.println("avsvakuv");
     }
     //ordenacion por insercion 
     //ordana los nombres segun que tan grande sea el nombre  
