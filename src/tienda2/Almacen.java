@@ -2,70 +2,49 @@
 package tienda2;
 import java.util.*;
 public class Almacen {
-    List<Productos>lista=new ArrayList<Productos>();
-    HashMap<String,Productos> productosHash = new HashMap<>();
-    Productos [] producto;
-    int cont;
-    public Almacen(int cap){
-        producto=new Productos[cap]; 
-        cont=0;
-    }
+    ArrayList<Productos>lista=new ArrayList<Productos>();
+    HashMap<String,Productos> productoshs= new HashMap<>();
     // agregar un producto
     public void agrepro(Productos p){
-        if(cont<producto.length){
-            producto[cont]=p;
-            cont++;
-            System.out.println("Procucto agregado");
-            System.out.println("agregar codigo del producto");
+        if(productoshs.containsKey(p.codigo)){
+            System.out.println("El codigo de este producto ya existe");
         }
         else{
-            System.out.println("Capacidad maxima alcansada");
+            lista.add(p);
+            productoshs.put(p.codigo, p);
+            System.out.println("Producto agregado con exito");
         }
+     
         
     }
+    public void buscarxcod(String codigo){
+         Productos pa = productoshs.get(codigo);
+         if(pa!=null){
+             System.out.println("Producto encontrado: "+pa);  
+         }
+         else{
+             System.out.println("El codigo del producto no existe: "+codigo);
+         }
+     }   
     public void listapro(){
-        if(cont==0){
+        if(lista.isEmpty()){
             System.out.println("No hay productos registrados");
-            return;
+            
         }
+        else{
         System.out.println("LISTA DE PRODUCTOS");
-        for(int i=0;i<cont;i++){
-            System.out.println(producto[i]);
+        lista.forEach(System.out::println);
         }
     }
     //ordenacion por insercion 
     //odena los productos segun el precio
     public void ordenPrecio(){
-        for (int i=1;i<cont;i++){
-            Productos actual =producto[i];
-            int j=i-1;
-            while(j>=0 && producto[j].precio>actual.precio){
-                producto[j+1]=producto[j];
-                j--;
-            }
-            producto[j+1]=actual;
-        }
-        System.out.println("Productos hordenados por precio");
-        System.out.println("avsvakuv");
+        lista.sort(Comparator.comparingDouble(p->p.precio));
     }
     //ordenacion por insercion 
     //ordana los nombres segun que tan grande sea el nombre  
     public void ordennombre(){
-        for(int i=1;i<cont;i++){
-            Productos actual = producto[i];
-            int j = i-1;
-            //>0 -> alfabeticamente mallor que el segundo
-            while(j>=0 && producto[j].nombre.compareToIgnoreCase(actual.nombre)>0){
-                producto[j+1]=producto[j];
-                j--;
-                
-            }
-            producto[j+1]=actual;
-        }
-        System.out.println("producto ordenado por orden alfabetico");
+        lista.sort(Comparator.comparing(p->p.nombre.toLowerCase()));
     }
    
 }
-/*
-agregar cogigos a los productos 
-*/

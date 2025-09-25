@@ -23,7 +23,7 @@ public class Tienda2 {
         //confirma si es el dueño si es asi le da la bienbenida si no le pide que lo intente otra ves 
         if(pr.propietarios(d)){ 
             //se crea un solo objeto cliente
-        Almacen al1 = new Almacen(20);
+        Almacen al1 = new Almacen();
         Clientes cl1=new Clientes("");
         sc.nextLine();
         //menu general
@@ -65,7 +65,7 @@ public class Tienda2 {
             System.out.println("Ingrese el nombre del producto");
                 String nompro=sc.nextLine();
                 System.out.println("ingrese el codigo del producto");
-                int codpro=sc.nextInt();
+                String codpro=sc.nextLine();
                 System.out.println("Ingrese el Stock del producto");
                 int stockpro=sc.nextInt();
                
