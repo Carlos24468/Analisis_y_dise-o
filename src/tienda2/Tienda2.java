@@ -51,7 +51,7 @@ public class Tienda2 {
             System.out.println("ingresar nombre del cliente: ");
             cl=sc.nextLine();
             cl1.busqueda(cl);
-            System.out.println("ingrese dni");
+            
         }
         //imprime a los clientes registrados
         if(mc==3){
@@ -77,7 +77,7 @@ public class Tienda2 {
         if(m==3){
             //apliacr lo echo en el almacen
             System.out.println("**********MENU**********\nLista de producto\n************************");
-            System.out.println("agregar codido del producto");
+            
             
             sc.nextLine();
             
@@ -102,7 +102,7 @@ public class Tienda2 {
         }
         if(m==4){
             System.out.println("SALIENDO TENGA UN BUEN DIA....");
-            System.out.println("avansar coma sea");
+          
             SALIR=true;
             
         }

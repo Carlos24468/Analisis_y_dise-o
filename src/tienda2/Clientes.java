@@ -29,7 +29,7 @@ public class Clientes {
                 
                 System.out.println("Cliente no registrado\n\ningrese el nombre del cliente a registrar ");
                 cl=sc1.nextLine();
-                System.out.println("ingrese el DNI del cliente");
+                
                 String clxr[]=new String[clr.length+1];
                 for(int y=0;y<clr.length;y++){
                     clxr[y]=clr[y];

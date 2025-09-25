@@ -1,7 +1,9 @@
 
 package tienda2;
-
+import java.util.*;
 public class Almacen {
+    List<Productos>lista=new ArrayList<Productos>();
+    HashMap<String,Productos> productosHash = new HashMap<>();
     Productos [] producto;
     int cont;
     public Almacen(int cap){
