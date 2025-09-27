@@ -45,6 +45,7 @@ public class Almacen {
     //ordana los nombres segun que tan grande sea el nombre  
     public void ordennombre(){
         lista.sort(Comparator.comparing(p->p.nombre.toLowerCase()));
+        System.out.println("elim");
     }
-   
+    
 }
