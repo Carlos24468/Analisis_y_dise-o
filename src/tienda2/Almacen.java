@@ -46,6 +46,7 @@ public class Almacen {
     public void ordennombre(){
         lista.sort(Comparator.comparing(p->p.nombre.toLowerCase()));
         System.out.println("elim");
+        System.out.println("elim tmb");
     }
     
 }
