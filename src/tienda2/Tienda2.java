@@ -82,7 +82,7 @@ public class Tienda2 {
             sc.nextLine();
             
             
-                System.out.println("\"**********MENU**********\n(1)Lista de productos\n(2)Lista de productos ordenados por precio\n(3)Lista de productos ordenados por nombre\n************************");
+                System.out.println("\"**********MENU**********\n(1)Lista de productos\n(2)Lista de productos ordenados por precio\n(3)Lista de productos ordenados por nombre\n(4)Buscar producto por codigo\n************************");
                 int ldpo=sc.nextInt();
                 if(ldpo==1){
                     System.out.println("Lista de productos");
@@ -97,6 +97,12 @@ public class Tienda2 {
                     System.out.println("Lista de productos ordenados por nombre");
                     al1.ordennombre();
                     al1.listapro();
+                }
+                if(ldpo==4){
+                    sc.nextLine();
+                    System.out.println("Ingrese el codigo del producto");
+                    String codigo=sc.nextLine();
+                    al1.buscarxcod(codigo);
                 }
             
         }

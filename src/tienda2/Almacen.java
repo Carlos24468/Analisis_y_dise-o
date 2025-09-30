@@ -18,9 +18,9 @@ public class Almacen {
         
     }
     public void buscarxcod(String codigo){
-         Productos pa = productoshs.get(codigo);
-         if(pa!=null){
-             System.out.println("Producto encontrado: "+pa);  
+         Productos p1 = productoshs.get(codigo);
+         if(p1!=null){
+             System.out.println("Producto encontrado: "+p1);  
          }
          else{
              System.out.println("El codigo del producto no existe: "+codigo);
@@ -45,8 +45,7 @@ public class Almacen {
     //ordana los nombres segun que tan grande sea el nombre  
     public void ordennombre(){
         lista.sort(Comparator.comparing(p->p.nombre.toLowerCase()));
-        System.out.println("elim");
-        System.out.println("elim tmb");
+        
     }
     
 }
