@@ -69,6 +69,7 @@ public class Clientes {
             System.out.println(clr[i]);
             System.out.println("agregar a los clientes con codigo");
             System.out.println("elim");
+            System.out.println("elimin 12");
         }
         
     }
