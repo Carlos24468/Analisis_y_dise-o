@@ -1,8 +1,12 @@
 
 package tienda2;
 import java.util.*;
+import java.io.*;
 public class Clientes {
     Scanner sc1=new Scanner(System.in);
+    ArrayList<String>clientes=new ArrayList<>();
+    HashMap<String, Clientes>clhash=new HashMap<>();
+    File archivoClientes = new File("Clientes.txt");
     String cl;
     String clr[]={"Ana", "Juan", "Pedro"};
     String bus;
@@ -67,12 +71,9 @@ public class Clientes {
         System.out.println("LISTA DE CLIENTES");
         for(int i=0;i<clr.length;i++ ){
             System.out.println(clr[i]);
-            System.out.println("a");
+            
         }
         
     }
-    /*
-    aplicar un has donde se buscaran los dni de los clientes 
-    agregar dni a los clientes 
-    */
+
 }
