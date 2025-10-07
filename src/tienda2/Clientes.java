@@ -4,76 +4,98 @@ import java.util.*;
 import java.io.*;
 public class Clientes {
     Scanner sc1=new Scanner(System.in);
-    ArrayList<String>clientes=new ArrayList<>();
-    HashMap<String, Clientes>clhash=new HashMap<>();
+    ArrayList<String> clientes= new ArrayList<>();
+    HashMap<String, String>clientesh=new HashMap<>();
     File archivoClientes = new File("Clientes.txt");
-    String cl;
-    String clr[]={"Ana", "Juan", "Pedro"};
-    String bus;
-    String lis;
-    String clxr[]=new String[clr.length+1];
-    boolean clrr=false;
-    public Clientes(String cl){
-        this.cl=cl;      
+    
+    public Clientes(){
+       clientes.add("Ana");
+       clientes.add("Juan");
+       clientes.add("Pedro");
+       for (String cl : clientes){
+           clientesh.put(cl.toLowerCase(), cl);
+       }
+       cargarArchivo();
     }
     // verifica si el cliente esta registrado si no lo esta lo registra
-    public void registro(String re){
-        for (int i=0;i<clr.length;i++){
-            
-        if(re.equalsIgnoreCase(clr[i])){
-                clrr=true;
-                break;
-            }
+    public void registro(String nombre){
+        if(clientesh.containsKey(nombre.toLowerCase())){
+            System.out.println("El cliente ya esta registrado");
         }
-            if(clrr){
-                System.out.println("El cliente ya esta registrago");
-                
-            }
-            else{
-                
-                System.out.println("Cliente no registrado\n\ningrese el nombre del cliente a registrar ");
-                cl=sc1.nextLine();
-                
-                String clxr[]=new String[clr.length+1];
-                for(int y=0;y<clr.length;y++){
-                    clxr[y]=clr[y];
-                }
-                clxr[clr.length]=cl;
-                clr=clxr;
-                System.out.println("cliente registrado con exito");
-            }
-    
-    
+        else{
+            clientes.add(nombre);
+            clientesh.put(nombre.toLowerCase(), nombre);
+            guardarArchivo(nombre);
+            System.out.println("Cliente registrado con exito");
+        }
 }
     
     //busca a los clientes 
-    public void busqueda(String bus){
-        boolean clb=false;
-         for (int i=0;i<clr.length;i++){
-            
-        if(bus.equalsIgnoreCase(clr[i])){
-                clb=true;
-                break;
-            }
-        }
-            if(clb){
-                System.out.println("El cliente ya esta registrago123");
-                
-            }
-            else{
-                
-                System.out.println("Cliente no registrado rejistrelo por favor");
-            }
-        
+    public void busquedaI(String nombre){
+      if (clientesh.containsKey(nombre.toLowerCase())){
+          System.out.println("Cliente: "+nombre+"  esta registrado");
+      }
+      else{
+          System.out.println("El cliente no existe");
+      }
     }
     //imprime los clientes registrados (aca se ordenara por orden alfabetico )
     public void lista(){
-        System.out.println("LISTA DE CLIENTES");
-        for(int i=0;i<clr.length;i++ ){
-            System.out.println(clr[i]);
-            
-        }
+        System.out.println("Lista de clientes");
+        clientes.forEach(System.out::println);
         
     }
+    //guarda a los clientes en un archivo txt como en la busqueda externa 
+    private void guardarArchivo(String nombre){ 
+        try (FileWriter fw = new FileWriter(archivoClientes, true);
+             BufferedWriter bw = new BufferedWriter(fw)) {
+            bw.write(nombre);
+            bw.newLine();
+        } catch (IOException e) {
+            System.out.println("❌ Error al guardar cliente en archivo: " + e.getMessage());
+        }
+    }
 
+    private void cargarArchivo(){
+        try(BufferedReader br = new BufferedReader(new FileReader(archivoClientes))){
+            String linea;
+            while((linea=br.readLine())!=null){
+                if(!clientesh.containsKey(linea.toLowerCase())){
+                    clientes.add(linea);
+                    clientesh.put(linea.toLowerCase(), linea);
+                }
+            }
+        }
+        catch(FileNotFoundException e){
+            
+        }
+        catch (IOException e){
+            System.out.println("Error al cargar el archivo"+e.getMessage());
+        }
+    }    
+        
+
+    public void busquedaExterna(String nombreBuscado) {
+        try (BufferedReader br = new BufferedReader(new FileReader(archivoClientes))) {
+            String linea;
+            boolean encontrado = false;
+
+            while ((linea = br.readLine()) != null) {
+                if (linea.equalsIgnoreCase(nombreBuscado)) {
+                    System.out.println("Cliente " + nombreBuscado + " encontrado en archivo");
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (!encontrado) {
+                System.out.println("Cliente " + nombreBuscado + " no existe en el archivo");
+            }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Archivo de clientes no encontrado");
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo: " + e.getMessage());
+        }
+    }
 }

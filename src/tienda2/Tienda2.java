@@ -24,7 +24,7 @@ public class Tienda2 {
         if(pr.propietarios(d)){ 
             //se crea un solo objeto cliente
         Almacen al1 = new Almacen();
-        Clientes cl1=new Clientes("");
+        Clientes cl1=new Clientes();
         sc.nextLine();
         //menu general
         while(!SALIR){
@@ -50,7 +50,7 @@ public class Tienda2 {
             sc.nextLine();
             System.out.println("ingresar nombre del cliente: ");
             cl=sc.nextLine();
-            cl1.busqueda(cl);
+            cl1.busquedaI(cl);
             
         }
         //imprime a los clientes registrados
