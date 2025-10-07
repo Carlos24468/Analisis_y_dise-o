@@ -39,7 +39,7 @@ public class Clientes {
           System.out.println("El cliente no existe");
       }
     }
-    //imprime los clientes registrados (aca se ordenara por orden alfabetico )
+   
     public void lista(){
         System.out.println("Lista de clientes");
         clientes.forEach(System.out::println);
@@ -52,7 +52,7 @@ public class Clientes {
             bw.write(nombre);
             bw.newLine();
         } catch (IOException e) {
-            System.out.println("❌ Error al guardar cliente en archivo: " + e.getMessage());
+            System.out.println("Error al guardar cliente en archivo: " + e.getMessage());
         }
     }
 

@@ -35,7 +35,7 @@ public class Tienda2 {
             sc.nextLine();
             //Menu de los clientes
             
-            System.out.println("**********MENU**********\n(1)Agregar clientes\n(2)Buscar clientes\n(3)Lista de clientes\n************************");
+            System.out.println("**********MENU**********\n(1)Agregar clientes\n(2)Buscar clientes\n(3)Lista de clientes\n(4)Busqueda de clientes (externa)\n************************");
             mc=sc.nextInt();
             sc.nextLine();
             if(mc==1){
@@ -56,6 +56,11 @@ public class Tienda2 {
         //imprime a los clientes registrados
         if(mc==3){
         cl1.lista();
+        }
+        if(mc==4){
+            System.out.println("ingresar nombre del cliente: ");
+            cl=sc.nextLine();
+            cl1.busquedaExterna(cl);
         }
     }
         if(m==2){
