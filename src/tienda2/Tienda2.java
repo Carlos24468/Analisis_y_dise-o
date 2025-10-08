@@ -114,6 +114,7 @@ public class Tienda2 {
         if(m==4){
             System.out.println("SALIENDO TENGA UN BUEN DIA....");
             System.out.println("bye");
+            System.out.println("a");
             SALIR=true;
             
         }

@@ -15,6 +15,7 @@ public class Productos {
     @Override
     public String toString(){
         return "Producto: " + nombre +" Codigo: "+codigo+" Stock: " +stock+ " Precio: " + precio;
+        
     }
     
 }
