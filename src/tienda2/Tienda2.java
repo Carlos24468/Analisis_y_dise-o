@@ -115,6 +115,7 @@ public class Tienda2 {
             System.out.println("SALIENDO TENGA UN BUEN DIA....");
             System.out.println("bye");
             System.out.println("a");
+            System.out.println("a");
             SALIR=true;
             
         }
