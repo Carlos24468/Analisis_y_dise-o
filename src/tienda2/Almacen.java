@@ -28,11 +28,11 @@ public class Almacen {
      }   
     public void listapro(){
         if(lista.isEmpty()){
-            System.out.println("No hay productos registrados");
+            System.out.println("No hay productos registrados.");
             
         }
         else{
-        System.out.println("LISTA DE PRODUCTOS");
+        System.out.println("LISTA DE PRODUCTOS.");
         lista.forEach(System.out::println);
         }
     }
