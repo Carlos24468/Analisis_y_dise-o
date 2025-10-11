@@ -20,28 +20,28 @@ public class Clientes {
     // verifica si el cliente esta registrado si no lo esta lo registra
     public void registro(String nombre){
         if(clientesh.containsKey(nombre.toLowerCase())){
-            System.out.println("El cliente ya esta registrado");
+            System.out.println("El cliente ya esta registrado.");
         }
         else{
             clientes.add(nombre);
             clientesh.put(nombre.toLowerCase(), nombre);
             guardarArchivo(nombre);
-            System.out.println("Cliente registrado con exito");
+            System.out.println("Cliente registrado con exito.");
         }
 }
     
     //busca a los clientes 
     public void busquedaI(String nombre){
       if (clientesh.containsKey(nombre.toLowerCase())){
-          System.out.println("Cliente: "+nombre+"  esta registrado");
+          System.out.println("Cliente: "+nombre+"  esta registrado.");
       }
       else{
-          System.out.println("El cliente no existe");
+          System.out.println("El cliente no existe.");
       }
     }
    
     public void lista(){
-        System.out.println("Lista de clientes");
+        System.out.println("Lista de clientes.");
         clientes.forEach(System.out::println);
         
     }
