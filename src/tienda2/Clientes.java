@@ -82,7 +82,7 @@ public class Clientes {
 
             while ((linea = br.readLine()) != null) {
                 if (linea.equalsIgnoreCase(nombreBuscado)) {
-                    System.out.println("Cliente " + nombreBuscado + " encontrado en archivo");
+                    System.out.println("Cliente " + nombreBuscado + " encontrado en archivo.");
                     encontrado = true;
                     break;
                 }
