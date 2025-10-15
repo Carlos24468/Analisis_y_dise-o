@@ -89,7 +89,7 @@ public class Clientes {
             }
 
             if (!encontrado) {
-                System.out.println("Cliente " + nombreBuscado + " no existe en el archivo");
+                System.out.println("Cliente " + nombreBuscado + " no existe en el archivo.");
             }
 
         } catch (FileNotFoundException e) {
