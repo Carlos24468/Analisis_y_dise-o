@@ -12,11 +12,11 @@ public class Dueno {
         public boolean propietarios(String d){
         for(int i=0;i<du.length;i++){
             if(d.equalsIgnoreCase(du[i])){
-                System.out.println("Bienvenido");
+                System.out.println("Bienvenido.");
                 return true;
             }
         }
-        System.out.println("Intentelo de nuevo ");
+        System.out.println("Intentelo de nuevo. ");
         return false;
         
     
