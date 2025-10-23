@@ -69,7 +69,7 @@ public class Tienda2 {
             System.out.println("***** Agregar Productos *****");
             System.out.println("Ingrese el nombre del producto.");
                 String nompro=sc.nextLine();
-                System.out.println("ingrese el codigo del producto");
+                System.out.println("ingrese el codigo del producto.");
                 String codpro=sc.nextLine();
                 System.out.println("Ingrese el Stock del producto");
                 int stockpro=sc.nextInt();
