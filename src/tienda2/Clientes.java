@@ -27,6 +27,7 @@ public class Clientes {
             clientesh.put(nombre.toLowerCase(), nombre);
             guardarArchivo(nombre);
             System.out.println("Cliente registrado con exito.");
+            System.out.println("wasaaaaaaaaa");
         }
 }
     
