@@ -74,7 +74,7 @@ public class Tienda2 {
                 System.out.println("Ingrese el Stock del producto.");
                 int stockpro=sc.nextInt();
                
-                  System.out.println("Ingrese el precio del producto");
+                  System.out.println("Ingrese el precio del producto.");
                 double prepro=sc.nextDouble();
                 Productos proal = new Productos(nompro,codpro,stockpro,prepro);
                 al1.agrepro(proal);
