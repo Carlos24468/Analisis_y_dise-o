@@ -28,6 +28,7 @@ public class Clientes {
             guardarArchivo(nombre);
             System.out.println("Cliente registrado con exito.");
             System.out.println("wasaaaaaaaaa");
+            System.out.println("doble wasaaaaaaaaaaaaaaaaaaaaaaa");
         }
 }
     
