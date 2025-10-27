@@ -90,16 +90,16 @@ public class Tienda2 {
                 System.out.println("\"**********MENU**********\n(1)Lista de productos\n(2)Lista de productos ordenados por precio\n(3)Lista de productos ordenados por nombre\n(4)Buscar producto por codigo\n************************");
                 int ldpo=sc.nextInt();
                 if(ldpo==1){
-                    System.out.println("Lista de productos");
+                    System.out.println("Lista de productos.");
                     al1.listapro();
                 }
                 if(ldpo==2){
-                    System.out.println("Lista de productos ordenados por precio");
+                    System.out.println("Lista de productos ordenados por precio.");
                     al1.ordenPrecio();
                     al1.listapro();
                 }
                 if(ldpo==3){
-                    System.out.println("Lista de productos ordenados por nombre");
+                    System.out.println("Lista de productos ordenados por nombre.");
                     al1.ordennombre();
                     al1.listapro();
                 }
