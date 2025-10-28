@@ -105,7 +105,7 @@ public class Tienda2 {
                 }
                 if(ldpo==4){
                     sc.nextLine();
-                    System.out.println("Ingrese el codigo del producto");
+                    System.out.println("Ingrese el codigo del producto..");
                     String codigo=sc.nextLine();
                     al1.buscarxcod(codigo);
                 }
