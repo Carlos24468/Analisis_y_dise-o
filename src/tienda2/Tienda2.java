@@ -116,6 +116,7 @@ public class Tienda2 {
             System.out.println("bye");
             System.out.println("a");
             System.out.println("a");
+            System.out.println("aaaaaaaaa");
             SALIR=true;
             
         }
