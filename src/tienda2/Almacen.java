@@ -32,7 +32,7 @@ public class Almacen {
             
         }
         else{
-        System.out.println("LISTA DE PRODUCTOS.");
+        System.out.println("LISTA DE PRODUCTOS:");
         lista.forEach(System.out::println);
         }
     }

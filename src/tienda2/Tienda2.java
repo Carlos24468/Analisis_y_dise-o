@@ -105,7 +105,7 @@ public class Tienda2 {
                 }
                 if(ldpo==4){
                     sc.nextLine();
-                    System.out.println("Ingrese el codigo del producto..");
+                    System.out.println("Ingrese el codigo del producto.");
                     String codigo=sc.nextLine();
                     al1.buscarxcod(codigo);
                 }
@@ -113,10 +113,7 @@ public class Tienda2 {
         }
         if(m==4){
             System.out.println("SALIENDO TENGA UN BUEN DIA....");
-            System.out.println("bye");
-            System.out.println("a");
-            System.out.println("a");
-            System.out.println("aaaaaaaaa");
+          
             SALIR=true;
             
         }
