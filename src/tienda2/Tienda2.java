@@ -87,7 +87,7 @@ public class Tienda2 {
             sc.nextLine();
             
             
-                System.out.println("\"**********MENU**********\n(1)Lista de productos\n(2)Lista de productos ordenados por precio\n(3)Lista de productos ordenados por nombre\n(4)Buscar producto por codigo\n************************");
+                System.out.println("\"**********MENU**********\n(1)Lista de productos\n(2)Lista de productos ordenados por precio\n(3)Lista de productos ordenados por nombre\n(4)Buscar producto por codigo\n(5)Orden de precios  con Shell Sort\n(6)Ordenar nombre con Quick Sort\n(7)Busqueda lineal de productos\n(8)Busqueda binaria de productos\n) ************************");
                 int ldpo=sc.nextInt();
                 if(ldpo==1){
                     System.out.println("Lista de productos.");
@@ -109,14 +109,36 @@ public class Tienda2 {
                     String codigo=sc.nextLine();
                     al1.buscarxcod(codigo);
                 }
-            
-        }
-        if(m==4){
-            System.out.println("SALIENDO TENGA UN BUEN DIA....");
-          
-            SALIR=true;
-            
-        }
+                if (ldpo == 5) {
+                    al1.shellSortporprecio();
+                    al1.listapro();
+                }
+
+                if (ldpo == 6) {
+                    al1.quickSortpornombre();
+                    al1.listapro();
+                }
+
+                if (ldpo== 7) {
+                    sc.nextLine();
+                    System.out.print("Ingrese el nombre del producto: ");
+                    String nombre = sc.nextLine();
+                    al1.busquedaLinealPorNombre(nombre);
+                }
+
+                if (ldpo== 8) {
+                    sc.nextLine();
+                    System.out.print("Ingrese el nombre del producto: ");
+                    String nombre = sc.nextLine();
+                    al1.busquedaBinariaPorNombre(nombre);
+                }
+                        }
+                        if(m==4){
+                            System.out.println("SALIENDO TENGA UN BUEN DIA....");
+
+                            SALIR=true;
+
+                        }
     }
         
     }
