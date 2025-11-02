@@ -66,14 +66,14 @@ public class Almacen {
             esp /= 2;
         }
 
-        System.out.println("Productos ordenados con Shell Sort");
+        System.out.println("Productos ordenados con Shell Sort.");
     }
 
     
     public void quickSortpornombre() {
         if (lista.size() > 1) {
             quickSortRecursivo(0, lista.size() - 1);
-            System.out.println("Productos ordenados con Quick Sort");
+            System.out.println("Productos ordenados con Quick Sort.");
         } else {
             System.out.println("No hay suficientes productos ");
         }
