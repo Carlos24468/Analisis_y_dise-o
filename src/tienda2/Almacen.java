@@ -128,7 +128,7 @@ public class Almacen {
             String nombreMedio = lista.get(medio).nombre.toLowerCase();
 
             if (nombreMedio.equals(nombreBuscado.toLowerCase())) {
-                System.out.println("Producto encontrado" + lista.get(medio));
+                System.out.println("Producto encontrado." + lista.get(medio));
                 encontrado = true;
                 break;
             } else if (nombreMedio.compareTo(nombreBuscado.toLowerCase()) < 0) {
