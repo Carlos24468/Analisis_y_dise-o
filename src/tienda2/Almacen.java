@@ -75,7 +75,7 @@ public class Almacen {
             quickSortRecursivo(0, lista.size() - 1);
             System.out.println("Productos ordenados con Quick Sort.");
         } else {
-            System.out.println("No hay suficientes productos ");
+            System.out.println("No hay suficientes productos. ");
         }
     }
 
