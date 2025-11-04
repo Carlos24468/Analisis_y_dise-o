@@ -143,3 +143,10 @@ public class Almacen {
         }
     }
 }
+/*
+en almacen estoy usando ambos tipos tipos de busqueda estoy usando la
+busqueda lineal para revisar producto por producto mientras que uso la 
+busqueda binaria aplicando el metodo de "Divide y Venceras" dividiendo las listas 
+ordenadas en mitades sucesibas lo que reduce el numero de comparaciones y
+mejorando la eficiencia del almacen 
+*/
