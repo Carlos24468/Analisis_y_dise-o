@@ -150,3 +150,8 @@ busqueda binaria aplicando el metodo de "Divide y Venceras" dividiendo las lista
 ordenadas en mitades sucesibas lo que reduce el numero de comparaciones y
 mejorando la eficiencia del almacen 
 */
+
+/*
+wsas wasa mucha tareaaaaaaaa ya no quiero travajar fin
+*/
+*/
