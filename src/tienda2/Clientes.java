@@ -59,7 +59,13 @@ public class Clientes {
 }
     
     /*
+    La busqueda recursiba es una forma de buscar un elemento llamandose el mimo metodo
+    repetidas veces asta que encuentre el resultadp o llege al final
+    Esta forma en lugar de usar while o for se repite a si misma avansando una pocicion mas en la lista
     
+    La recuribidad presenta el proceso de busqueda mas elegante y teorica aplicando los conceptos de divide
+    y venceras esta no es mas eficiente que los bucles pero demientra que puede resolver el
+    mismo problema sin interaciones explicadas 
     */
    
     public void lista(){
