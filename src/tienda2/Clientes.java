@@ -40,6 +40,27 @@ public class Clientes {
           System.out.println("El cliente no existe.");
       }
     }
+    
+    public void buscarRecursivo(String nombre, int indice) {
+    //si llegamos al final de la lista
+    if (indice >= clientes.size()) {
+        System.out.println("Cliente no encontrado");
+        return;
+    }
+
+    // Si encontramos al cliente
+    if (clientes.get(indice).equalsIgnoreCase(nombre)) {
+        System.out.println("Cliente encontrado" + clientes.get(indice));
+        return;
+    }
+
+    // Llamada recursiva con el siguiente índice
+    buscarRecursivo(nombre, indice + 1);
+}
+    
+    /*
+    
+    */
    
     public void lista(){
         System.out.println("Lista de clientes.");
@@ -99,4 +120,5 @@ public class Clientes {
             System.out.println("Error al leer el archivo: " + e.getMessage());
         }
     }
+    
 }

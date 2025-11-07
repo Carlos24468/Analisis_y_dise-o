@@ -35,7 +35,7 @@ public class Tienda2 {
             sc.nextLine();
             //Menu de los clientes
             
-            System.out.println("**********MENU**********\n(1)Agregar clientes\n(2)Buscar clientes\n(3)Lista de clientes\n(4)Busqueda de clientes (externa)\n************************");
+            System.out.println("**********MENU**********\n(1)Agregar clientes\n(2)Buscar clientes\n(3)Lista de clientes\n(4)Busqueda de clientes (externa)\n(5)Busqueda de clientes recursiba ************************");
             mc=sc.nextInt();
             sc.nextLine();
             if(mc==1){
@@ -61,6 +61,11 @@ public class Tienda2 {
             System.out.println("ingresar nombre del cliente: ");
             cl=sc.nextLine();
             cl1.busquedaExterna(cl);
+        }
+        if(mc==5){
+            System.out.println("Ingrese el nombre del cliente a buscar: ");
+            String nombre = sc.nextLine();
+            cl1.buscarRecursivo(nombre, 0);
         }
     }
         if(m==2){
