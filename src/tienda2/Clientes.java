@@ -50,7 +50,7 @@ public class Clientes {
 
     // Si encontramos al cliente
     if (clientes.get(indice).equalsIgnoreCase(nombre)) {
-        System.out.println("Cliente encontrado" + clientes.get(indice));
+        System.out.println("Cliente encontrado." + clientes.get(indice));
         return;
     }
 
