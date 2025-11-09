@@ -44,7 +44,7 @@ public class Clientes {
     public void buscarRecursivo(String nombre, int indice) {
     //si llegamos al final de la lista
     if (indice >= clientes.size()) {
-        System.out.println("Cliente no encontrado");
+        System.out.println("Cliente no encontrado.");
         return;
     }
 
