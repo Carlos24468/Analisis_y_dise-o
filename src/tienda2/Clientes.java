@@ -98,7 +98,7 @@ public class Clientes {
             
         }
         catch (IOException e){
-            System.out.println("Error al cargar el archivo"+e.getMessage());
+            System.out.println("Error al cargar el archivo."+e.getMessage());
         }
     }    
         
