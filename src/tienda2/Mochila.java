@@ -16,7 +16,7 @@ public class Mochila {
     public void buscarSeleccionOptima(double presupuesto) {
         backtrack(0, presupuesto, 0, new ArrayList<>());
         if (mejorSeleccion.isEmpty()) {
-            System.out.println("No hay selección valida dentro del presupuesto");
+            System.out.println("No hay selección valida dentro del presupuesto.");
         } else {
             System.out.println("\nMejor selección encontrada:");
             mejorSeleccion.forEach(System.out::println);
