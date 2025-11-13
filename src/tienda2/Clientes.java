@@ -20,7 +20,7 @@ public class Clientes {
     // verifica si el cliente esta registrado si no lo esta lo registra
     public void registro(String nombre){
         if(clientesh.containsKey(nombre.toLowerCase())){
-            System.out.println("El cliente ya esta registrado.");
+            System.out.println("El cliente ya esta registrado..");
         }
         else{
             clientes.add(nombre);
