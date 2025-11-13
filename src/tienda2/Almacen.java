@@ -12,7 +12,7 @@ public class Almacen {
         else{
             lista.add(p);
             productoshs.put(p.codigo, p);
-            System.out.println("Producto agregado con exito.");
+            System.out.println("Producto agregado con exito...");
         }
      
         
