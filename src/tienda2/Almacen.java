@@ -7,7 +7,7 @@ public class Almacen {
     // agregar un producto
     public void agrepro(Productos p){
         if(productoshs.containsKey(p.codigo)){
-            System.out.println("El codigo de este producto ya existe.");
+            System.out.println("El codigo de este producto ya existe.,");
         }
         else{
             lista.add(p);
