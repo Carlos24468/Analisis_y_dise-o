@@ -16,7 +16,7 @@ public class Dueno {
                 return true;
             }
         }
-        System.out.println("Intentelo de nuevo. ");
+        System.out.println("Intentelo de nuevo... ");
         return false;
         
     
