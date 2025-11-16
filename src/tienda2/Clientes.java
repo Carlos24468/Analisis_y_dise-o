@@ -121,7 +121,7 @@ public class Clientes {
             }
 
         } catch (FileNotFoundException e) {
-            System.out.println("Archivo de clientes no encontrado");
+            System.out.println("Archivo de clientes no encontrado.");
         } catch (IOException e) {
             System.out.println("Error al leer el archivo: " + e.getMessage());
         }
